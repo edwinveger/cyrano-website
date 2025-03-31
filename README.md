@@ -2,13 +2,12 @@
 
 A static website for the Cyrano musical production, set in 19th century France.
 
-## Features
+## Project Structure
 
-- Responsive design that works on all devices
-- Modern, elegant styling inspired by 19th century French aesthetics
-- Easy navigation with sticky header
-- Pages for cast, orchestra, and synopsis
-- Optimized for performance
+- `public/` - Website files (HTML, CSS, images)
+- `Dockerfile` - Container configuration for production deployment
+- `nginx.conf` - Nginx server configuration
+- `server.py` - Local development server
 
 ## Local Development
 
@@ -25,11 +24,8 @@ To run the website locally:
 
 ### GitHub Pages
 
-1. Create a new repository on GitHub
-2. Push this code to the repository
-3. Go to repository Settings > Pages
-4. Select the main branch as the source
-5. Your site will be available at `https://[username].github.io/[repository-name]`
+The website is automatically deployed to GitHub Pages when changes are pushed to the main branch. The site is available at:
+https://[username].github.io/[repository-name]
 
 ### Docker Deployment
 
@@ -43,13 +39,4 @@ To deploy using Docker:
 2. Run the container:
    ```bash
    docker run -p 80:80 cyrano-website
-   ```
-
-## Project Structure
-
-- `index.html` - Main landing page
-- `cast.html` - Cast information
-- `orchestra.html` - Orchestra information
-- `synopsis.html` - Show synopsis
-- `styles.css` - Main stylesheet
-- `server.py` - Local development server 
+   ``` 
