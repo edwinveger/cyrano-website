@@ -10,6 +10,11 @@
     <nav class="navbar">
         <div class="nav-content">
             <div class="logo">Cyrano</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./cast.html" class="active">Cast</a></li>
@@ -64,5 +69,23 @@
     <footer>
         <p>&copy; 2024 Cyrano Musical Production. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
