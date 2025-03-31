@@ -201,6 +201,80 @@ footer {
     font-style: italic;
 }
 
+/* Synopsis Page Styles */
+.synopsis-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.synopsis-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.synopsis-section h2 {
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.synopsis-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.scene-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.scene {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.scene h3 {
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.scene p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+}
+
+.song-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--background-color);
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.song-list li:last-child {
+    border-bottom: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-content {
@@ -230,5 +304,17 @@ footer {
     .orchestra-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
+    }
+
+    .synopsis-container {
+        padding: 1rem;
+    }
+
+    .synopsis-section {
+        padding: 1.5rem;
+    }
+
+    .scene-grid {
+        grid-template-columns: 1fr;
     }
 } 
