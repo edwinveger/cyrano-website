@@ -131,6 +131,76 @@ footer {
     margin-top: 4rem;
 }
 
+/* Page Header */
+.page-header {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.page-header h1 {
+    font-family: var(--font-secondary);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Cast and Orchestra Grids */
+.cast-grid,
+.orchestra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.cast-member,
+.orchestra-member {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cast-member:hover,
+.orchestra-member:hover {
+    transform: translateY(-5px);
+}
+
+.cast-member img,
+.orchestra-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.cast-member h3,
+.orchestra-member h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 1rem;
+    text-align: center;
+}
+
+.cast-member .role,
+.orchestra-member .role {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-content {
@@ -150,5 +220,15 @@ footer {
 
     .subtitle {
         font-size: 1.2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .cast-grid,
+    .orchestra-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 } 
